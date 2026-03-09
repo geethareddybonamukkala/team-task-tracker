@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+<div class="card shadow">
+
+<div class="card-header bg-success text-white">
+Create Project
+</div>
+
+<div class="card-body">
+
+<form th:action="@{/saveProject}" th:object="${project}" method="post">
+
+<label>Project Name</label>
+<input class="form-control mb-3" th:field="*{projectName}">
+
+<label>Description</label>
+<input class="form-control mb-3" th:field="*{description}">
+
+<button class="btn btn-success">Save</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
